@@ -18,12 +18,12 @@ Gem::Specification.new do |s|
   s.rubyforge_project = s.name
   s.required_rubygems_version = ">= 1.3.4"
 
-  s.add_dependency("activesupport", [">= 5.0.0"])
-  s.add_dependency("activerecord", [">= 5.0.0"])
+  s.add_dependency("activesupport", [">= 6.0.0"])
+  s.add_dependency("activerecord", [">= 6.0.0"])
   s.add_development_dependency("rspec", ["~> 3.8"])
   s.add_development_dependency("factory_bot", ["~> 4.11"])
   s.add_development_dependency("faker", ["~> 1.9.1"])
-  s.add_development_dependency("sqlite3", ["~> 1.3.13"])
+  s.add_development_dependency("sqlite3", ["~> 1.4"])
   s.add_development_dependency("appraisal", ["~> 2.2.0"])
   s.add_development_dependency "rake"
 end
