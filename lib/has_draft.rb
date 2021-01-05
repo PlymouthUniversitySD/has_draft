@@ -24,8 +24,8 @@ module HasDraft
         scope :without_draft, lambda { includes(:draft).where("#{draft_table_name}.id IS NULL").references(draft_table_name) }
       end
 
-      # Default parent class to ActiveRecord::Base
-      options[:extends] = ActiveRecord::Base if options[:extends].nil?
+      # Default parent class to ApplicationRecord
+      options[:extends] = ApplicationRecord if options[:extends].nil?
 
       # Dynamically Create Model::Draft Class
       const_set(draft_class_name, Class.new(options[:extends]))

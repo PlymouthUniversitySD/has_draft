@@ -15,13 +15,18 @@ load(File.dirname(__FILE__) + "/db/schema.rb")
 
 require File.dirname(__FILE__) + '/../init'
 
+# ApplicationRecord class, which should be present in any app now
+class ApplicationRecord < ActiveRecord::Base
+  self.abstract_class = true
+end
+
 # Example has_draft Model:
-class Article < ActiveRecord::Base
+class Article < ApplicationRecord
   has_draft
 end
 
 # Empty class to test ability of Draft class to extend other classes
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
 
 end
 

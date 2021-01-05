@@ -87,8 +87,8 @@ describe HasDraft do
 
   context "Draft class extends" do
 
-    it "ActiveRecord::Base when no options are passed" do
-      expect(Article::Draft.superclass).to eql(ActiveRecord::Base)
+    it "ApplicationRecord when no options are passed" do
+      expect(Article::Draft.superclass).to eql(ApplicationRecord)
     end
 
     it "the class passed in with the :extends option" do
